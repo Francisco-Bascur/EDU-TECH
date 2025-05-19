@@ -64,7 +64,7 @@ public class CursoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id) {
+    public ResponseEntity<?> eliminar(@PathVariable Integer id) {
         try {
             cursoService.delete(id);
             return ResponseEntity.noContent().build();

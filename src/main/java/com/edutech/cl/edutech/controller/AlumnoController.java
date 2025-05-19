@@ -36,7 +36,7 @@ public class AlumnoController {
     public ResponseEntity<Alumno> guardar(@RequestBody Alumno alumno) {
         Alumno alumnoNuevo = alumnoService.save(alumno);
         return ResponseEntity.status(HttpStatus.CREATED).body(alumnoNuevo);
-    }
+    } 
 
     @GetMapping("/{id}")
     public ResponseEntity<Alumno> buscar(@PathVariable Integer id){
@@ -67,7 +67,7 @@ public class AlumnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id) {
+    public ResponseEntity<?> eliminar(@PathVariable Integer id) {
         try {
             alumnoService.delete(id);
             return ResponseEntity.noContent().build();

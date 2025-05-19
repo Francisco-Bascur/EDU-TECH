@@ -64,7 +64,7 @@ public class TutorController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id) {
+    public ResponseEntity<?> eliminar(@PathVariable Integer id) {
         try {
             TutorService.delete(id);
             return ResponseEntity.noContent().build();

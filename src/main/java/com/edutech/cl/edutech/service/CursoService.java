@@ -19,7 +19,7 @@ public class CursoService {
         return cursoRepository.findAll();
     }
 
-    public Curso FIndById(long id) {
+    public Curso FIndById(Integer id) {
         return cursoRepository.findById(id).get();
     }
 
@@ -27,7 +27,7 @@ public class CursoService {
         return cursoRepository.save(curso);
     }
 
-    public void delete(Long id) {
+    public void delete(Integer id) {
         cursoRepository.deleteById(id);
     }
 

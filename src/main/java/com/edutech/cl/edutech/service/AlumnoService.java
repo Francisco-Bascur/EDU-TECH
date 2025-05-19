@@ -19,7 +19,7 @@ public class AlumnoService {
         return alumnoRepository.findAll();
     }
 
-    public Alumno FIndById(long id) {
+    public Alumno FIndById(Integer id) {
         return alumnoRepository.findById(id).get();
     }
 
@@ -27,7 +27,7 @@ public class AlumnoService {
         return alumnoRepository.save(alumno);
     }
 
-    public void delete(Long id) {
+    public void delete(Integer id) {
         alumnoRepository.deleteById(id);
     }
 

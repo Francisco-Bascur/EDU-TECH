@@ -19,7 +19,7 @@ public class TutorService {
         return tutorRepository.findAll();
     }
 
-    public Tutor FIndById(long id) {
+    public Tutor FIndById(Integer id) {
         return tutorRepository.findById(id).get();
     }
 
@@ -27,7 +27,7 @@ public class TutorService {
         return tutorRepository.save(tutor);
     }
 
-    public void delete(Long id) {
+    public void delete(Integer id) {
         tutorRepository.deleteById(id);
     }
 
