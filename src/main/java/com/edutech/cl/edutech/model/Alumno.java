@@ -25,22 +25,22 @@ public class Alumno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length=50)
     private String nombre;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length=50)
     private String apellido;
 
-    @Column(name = "run", nullable = false, unique = true)
-    private String run;  // Formato: 12.345.678-9
+    @Column(name = "run", nullable = false, unique = true, length=10)
+    private String run;  
 
     @Column(name = "fecha_nacimiento", nullable = false)
     @Temporal(TemporalType.DATE)
     private Date fechaNacimiento;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length=50)
     private String email;
 
-    @Column(nullable = false)
-    private String contraseña;  // En producción, usa @JsonIgnore y hash
+    @Column(nullable = false, length=30)
+    private String contraseña;  
 }
