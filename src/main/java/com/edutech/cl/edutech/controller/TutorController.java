@@ -14,15 +14,8 @@ public class TutorController {
 
     private final TutorService tutorService;
 
-    public TutorController(TutorService tutorService) {
-        this.tutorService = tutorService;
-    }
 
-    // Listar todos los tutores
-    @GetMapping
-    public List<Tutor> listar() {
-        return tutorService.listar();
-    }
+
 
     // Obtener tutor por ID
     @GetMapping("/{id}")
@@ -59,10 +52,4 @@ public class TutorController {
         }
         return ResponseEntity.notFound().build();
     }
-}
-
-
-public class TutorController {
-
-
 }
